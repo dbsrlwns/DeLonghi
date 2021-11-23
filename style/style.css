@@ -1,0 +1,473 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+/* div#headerFrame 시작 */
+#headerFrame {
+  width: 100%;
+  margin-bottom: 110px;
+  background-color: #0c2645;
+
+  position: fixed;
+  z-index: 10;
+}
+
+#headerFrame header#header {
+  width: 1300px;
+  height: 110px;
+  /* border: 1px solid #aaa; */
+  margin: 0 auto;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* header#header 시작 */
+
+/* div#headerLogo 시작 */
+header#header div#headerLogo {
+  width: 320px;
+  text-align: center;
+  /* border: 1px solid #fff; */
+}
+/* div#headerLogo 끝 */
+
+/* nav#gnb 시작 */
+header#header nav#gnb {
+  width: 600px;
+  /* border: 1px solid #fff; */
+  margin: 0 10px;
+}
+header#header ul#mainMenu {
+  height: 110px;
+  /* border: 4px solid #0f0; */
+
+  /* position: relative; */
+}
+header#header nav#gnb li.mainLi {
+  text-align: center;
+  /* border: 1px solid #f00; */
+  flex: 1;
+}
+header#header nav#gnb li.mainLi > a {
+  /* width: 100%; */
+  height: 110px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 110px;
+  font-weight: bold;
+  /* border: 1px solid #f80; */
+  display: inline-block;
+}
+
+/* ul.subMenu 시작 */
+
+#gnb ul.subMenu {
+  /* border: 1px solid #000; */
+  position: absolute;
+  z-index: 1;
+
+  /* 디버깅대상 시작 */
+  display: flex;
+  /* display: none; */
+  /* 디버깅대상 끝, 코드 꼬임 현상
+  => CSS에서 다른 레이아웃 적용
+        또는 jQuery, js에서 CSS레이아웃 적용 */
+}
+/* 
+#gnb ul.subMenu li {
+  border: 1px solid #000;
+} */
+
+#gnb li.subLi a {
+  color: #000;
+  width: 190px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 2px;
+  /* border: 1px solid #000; */
+  display: inline-block;
+}
+#gnb li.subLi > a {
+  height: 60px;
+  line-height: 60px;
+}
+/* 
+#gnb li.mainLi:nth-child(3) ul.subMenu {
+  transform: translateX(-30%);
+}
+#gnb li.mainLi:nth-child(4) ul.subMenu {
+  transform: translateX(-60%);
+} */
+
+#gnb li.mainLi:not(:first-child) ul.subMenu {
+  left: 38.3%;
+}
+
+#gnb ul.subMenu2Depth li {
+  text-align: left;
+  text-indent: 29px;
+  line-height: 28px;
+}
+#gnb ul.subMenu2Depth li a {
+  color: #888;
+  font-size: 14px;
+}
+/* ul.subMenu 끝 */
+
+/* 하이라이트 효과 시작 */
+#header #gnb li.mainLi:hover > a {
+  color: #08f;
+  border-bottom: 4px solid #08f;
+}
+#header #gnb li.subLi > a:hover {
+  color: #08f;
+}
+/* 하이라이트 효과 끝 */
+
+/* nav#gnb 끝 */
+
+/* nav#headerLnb 시작 */
+#header nav#headerLnb {
+  width: 290px;
+  padding: 0 10px;
+  /* border: 1px solid #fff; */
+}
+#header nav#headerLnb ul {
+  height: 110px;
+  justify-content: space-around;
+}
+#header nav#headerLnb li {
+  text-align: center;
+
+  flex: 1;
+}
+#header nav#headerLnb li a {
+  height: 68px;
+  line-height: 110px;
+  /* border: 1px solid #f80; */
+  display: inline-block;
+}
+#header nav#headerLnb li span {
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  padding: 10px 0;
+  border-bottom: 3px solid #08f;
+  display: inline-block;
+  visibility: hidden;
+}
+/* nav#headerLnb 끝 */
+
+/* header#header 끝 */
+
+/* div#headerFrame 끝 */
+
+/* div#subMenuBG 시작 */
+div#subMenuBG {
+  width: 100%;
+  height: 160px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+
+  display: none;
+  position: fixed;
+  top: 110px;
+
+  z-index: 1;
+}
+/* div#subMenuBG 끝 */
+
+/* div#wrap 시작 */
+div#wrap {
+  width: 1000px;
+  /* height: 300px;  */
+
+  padding-top: 110px; /* #headerFrame  position: fixed; 적용에 필요함 */
+
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+
+/* div#locator 시작 */
+div#locator {
+  padding: 10px 20px;
+  margin-bottom: 4px;
+}
+#locator > * {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+/* div#locator 끝 */
+
+/* header#headerTitle 시작 */
+header#loginTitle {
+  padding: 16px;
+  /* border: 1px solid #000; */
+  margin: 14px 0 30px;
+}
+#loginTitle h1 {
+  font-size: 50px;
+  text-align: center;
+  /* border: 1px solid #08f; */
+}
+/* header#headerTitle 끝 */
+
+#wrap hr {
+  border-color: #000;
+}
+
+/* form#loginForm 시작 */
+#wrap form#loginForm {
+  width: 740px;
+  /* border: 1px solid #aaa; */
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#wrap #loginForm header#loginSubTitle {
+  margin-top: 40px;
+}
+#wrap #loginForm header h2 {
+  color: #777;
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* div#multiTabArea 시작 */
+
+div#multiTabArea button {
+  /* 초기상태 버튼스타일 */
+  color: #666;
+  font-size: 15px;
+  padding: 22px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  cursor: pointer;
+  flex: 1;
+}
+
+div#multiTabArea button:first-child {
+  /* 클릭했을 때 버튼스타일 */
+  color: #3289e8;
+  border: 1px solid #3289e8;
+  border-bottom-color: #fff;
+}
+
+div#multiTabArea button:last-child {
+  /* 클릭하지 않은 버튼스타일 */
+  border-left: none;
+  border-bottom: 1px solid #3289e8;
+}
+
+/* div#multiTabArea 끝 */
+
+/* table#loginTbl 시작 */
+table#loginTbl {
+  width: 100%;
+  /* border: 1px solid #000; */
+  border-spacing: 10px;
+  margin: 34px 0;
+}
+#loginTbl caption {
+  color: #666;
+  font-size: 15px;
+  text-align: left;
+  caption-side: bottom;
+  margin: 8px 0;
+}
+#loginTbl caption::before {
+  content: "\2022";
+}
+
+#loginTbl input {
+  width: 450px;
+  font-size: 16px;
+  padding: 16px;
+  border: 1px solid #ccc;
+}
+#loginTbl input::placeholder {
+  color: #999;
+}
+#loginTbl input:focus {
+  border: 1px solid #fff;
+  outline: 1px solid #3289e8;
+}
+
+#loginTbl td:first-child {
+  width: 456px;
+  /* border: 1px solid #000; */
+}
+#loginTbl button {
+  width: 240px;
+  height: 120px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  border: 1px solid #3289e8;
+  background-color: #3289e8;
+  display: inline-block;
+  transform: translateX(6px);
+  cursor: pointer;
+}
+
+#loginTbl button:hover {
+  background-color: rgba(50, 138, 232, 0.815);
+}
+/* table#loginTbl 끝 */
+
+/* div#accountLink 시작 */
+div#accountLink > div > span {
+  cursor: pointer;
+}
+div#accountLink {
+  /* border: 1px solid #000; */
+  align-items: center;
+}
+div#accountLink > div:nth-child(2n + 1) {
+  text-align: center;
+  flex: 1;
+}
+div#accountLink > div:nth-child(2n) {
+  width: 1px;
+  height: 20px;
+}
+div#accountLink div.seperateLine {
+  width: 1px;
+  height: 20px;
+  background-image: url(../images/seperateLine.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* span.accountLinkIcon 시작 */
+div#accountLink > div:nth-child(2n + 1) {
+  justify-content: center;
+  align-items: center;
+}
+#accountLink span.accountLinkIcon {
+  width: 80px;
+  height: 80px;
+  /* border: 1px solid #000; */
+  border-radius: 40px;
+  margin-right: 10px;
+  display: inline-block;
+}
+/* span.accountLinkIcon 끝 */
+
+/* 계정작업 관련 링크 리팩토리 작업 시작 */
+#accountLink span:first-child {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#accountLink > div:hover > span:first-child {
+  background-color: #3289e8;
+}
+#accountLink > div:hover > span:last-child {
+  color: #3289e8;
+}
+/* 계정작업 관련 링크 리팩토리 작업 끝 */
+
+/* 회원가입 링크 시작 */
+#accountLink span#join {
+  background-image: url(../images/icon01_Join.png);
+  background-size: 35px 27px;
+}
+#accountLink div#joinDiv:hover span#join {
+  background-image: url(../images/icon01_Join_On.png);
+}
+/* 회원가입 링크 끝 */
+
+/* 아이디찾기 링크 시작 */
+#accountLink span#findID {
+  background-image: url(../images/icon02_FindID.png);
+  background-size: 34px 27px;
+}
+#accountLink div#findIDDiv:hover span#findID {
+  background-image: url(../images/icon02_FindID_On.png);
+}
+/* 아이디찾기 링크 끝 */
+
+/* 비밀번호찾기 링크 시작 */
+#accountLink span#findPW {
+  background-image: url(../images/icon03_FindPW.png);
+  background-size: 31px 28px;
+}
+#accountLink div#findPWDiv:hover span#findPW {
+  background-image: url(../images/icon03_FindPW_On.png);
+}
+/* 비밀번호찾기 링크 끝 */
+
+/* div#accountLink 끝 */
+
+/* form#loginForm 끝 */
+
+/* div#wrap 끝 */
+
+/* div#footerFrame 시작 */
+div#footerFrame {
+  background-color: #0c2645;
+}
+
+#footerFrame footer#footer {
+  padding: 70px 0 140px;
+  /* border: 1px solid #eee; */
+  margin: 0px auto;
+  /* margin-bottom: 40px; */
+}
+
+#footerFrame nav#footerLnb,
+#footerFrame div#footerLogo,
+#footerFrame div#companyArea {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* nav#footerLnb 시작 */
+#footerFrame nav#footerLnb ul {
+  justify-content: center;
+}
+#footerFrame nav#footerLnb ul li {
+  margin: 0 36px;
+  list-style-type: disc;
+}
+#footerFrame nav#footerLnb li::marker {
+  color: #7bf;
+}
+#footerFrame nav#footerLnb a {
+  color: #fff;
+}
+/* nav#footerLnb 끝 */
+
+#footerFrame hr {
+  border: none;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.6);
+  margin: 22px 0;
+}
+
+/* div#footerLogo 시작 */
+#footerFrame div#footerLogo {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 17px;
+}
+/* div#footerLogo 끝 */
+
+/* div#companyArea 시작 */
+#footerFrame div#companyArea span {
+  color: #999;
+  font-size: 13px;
+  font-style: normal;
+  margin: 0 10px;
+}
+#footerFrame div#companyInfo,
+#footerFrame address,
+#footerFrame div#customContact {
+  text-align: center;
+  line-height: 22px;
+}
+/* div#companyArea 끝 */
+
+/* div#footerFrame 끝 */
